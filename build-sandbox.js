@@ -4,7 +4,7 @@ const path = require('path');
 
 const distDir = path.join(__dirname, 'dist-sandbox');
 const sandboxDir = path.join(__dirname, 'sandbox');
-const glowscriptOfflineDir = path.join(__dirname, 'GlowscriptOffline');
+const glowscriptOfflineDir = path.join(__dirname, 'GlowScriptOffline');
 
 // Remove dist-sandbox if it exists
 if (fs.existsSync(distDir)) {
