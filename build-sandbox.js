@@ -48,7 +48,7 @@ copyDir(path.join(glowscriptOfflineDir, 'glowscript_libraries'), path.join(distD
 console.log(`Copied glowscript_libraries to ${distDir}`);
 
 // Copy GlowScript.html
-fs.copyFileSync(path.join(glowscriptOfflineDir, 'GlowScript.html'), path.join(distDir, 'GlowScript.html'));
+fs.copyFileSync(path.join(glowscriptOfflineDir, 'GlowScript.html'), path.join(distDir, 'GlowScript.txt'));
 console.log(`Copied GlowScript.html to ${distDir}`);
 
 console.log('Build complete!');

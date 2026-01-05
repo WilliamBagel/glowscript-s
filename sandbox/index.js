@@ -1,4 +1,4 @@
-const csp = `http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval'"`
+const csp = `http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'none'; child-src 'none'; sandbox 'allow-scripts'"`
 const sandbox = document.getElementById('sandbox');
 const srcdoc = `
     <!DOCTYPE html>
@@ -7,7 +7,7 @@ const srcdoc = `
             <meta ${csp}>
         </head>
         <body style="border:none; margin:0px; width:100%; height:100%">
-            <iframe id="sandbox" style="border:none; width:100%; height:100%"></iframe>
+            <iframe id="sandbox" sandbox="allow-scripts" style="border:none; width:100%; height:100%"></iframe>
             <script>
                 const sandbox = document.getElementById('sandbox');
                 const xhr = new XMLHttpRequest();
@@ -15,7 +15,7 @@ const srcdoc = `
                     const glowscriptHTML = xhr.response;
                     sandbox.srcdoc = glowscriptHTML;
                 };
-                xhr.open("GET", "GlowScript.html");
+                xhr.open("GET", "GlowScript.txt");
                 xhr.send();
             </script>
         </ body>
