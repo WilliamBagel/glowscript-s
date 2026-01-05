@@ -58,13 +58,13 @@
 
 <button onclick="runCode()">Run</button>
 &nbsp;&nbsp;&nbsp;
-<button onclick="saveCode()">Save</button>
+<!-- <button onclick="saveCode()">Save</button>
 &nbsp;&nbsp;&nbsp;
 <a href="VPythonDocs/index.html" target="_blank">Help</a>
 &nbsp;&nbsp;&nbsp;
 <button id="export" onclick="exportCode()">Export</button>
 &nbsp;&nbsp;&nbsp;
-<input type="file" id="read_local_file" />
+<input type="file" id="read_local_file" /> -->
 
 <script>
     const gsversion = '3.2'
@@ -261,8 +261,6 @@
         }
     }
 
-    document.getElementById('read_local_file').addEventListener('change', readSingleFile, false)
-
 </script>
 
 <div id="gserrors" style="font-family:Verdana;font-size:13px;color:#c00">
@@ -277,7 +275,7 @@
 <script>
     // Splits library: https://github.com/nathancahill/Split.js
     var lastwindowwidth = window.innerWidth
-    var splits = Split(['#sourcetext', '#glows', "#printing"], { sizes: [50, 50, 0], onDrag: splitdrag })
+    var splits = Split(['#sourcetext', '#glows', "#printing"], { sizes: [50, 10, 40], onDrag: splitdrag })
     // splits.getSizes() returns current percentage widths; splits.setSizes([w1,w2]) resets them
     var source = ''
     GSedit.init("#sourcetext", source, 0.5 * lastwindowwidth, false) // not readonly
@@ -289,6 +287,7 @@
     }
 
     function splitAdjust() {  // p is true if print pane should be open
+        return
         var current = splits.getSizes()
         var w1 = current[0] * lastwindowwidth / window.innerWidth
         var w2 = current[1]

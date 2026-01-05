@@ -43,10 +43,6 @@ function copyDir(src, dest) {
 copyDir(sandboxDir, distDir);
 console.log(`Copied sandbox contents to ${distDir}`);
 
-// Copy glowscript_data folder
-copyDir(path.join(glowscriptOfflineDir, 'glowscript_data'), path.join(distDir, 'glowscript_data'));
-console.log(`Copied glowscript_data to ${distDir}`);
-
 // Copy glowscript_libraries folder
 copyDir(path.join(glowscriptOfflineDir, 'glowscript_libraries'), path.join(distDir, 'glowscript_libraries'));
 console.log(`Copied glowscript_libraries to ${distDir}`);
