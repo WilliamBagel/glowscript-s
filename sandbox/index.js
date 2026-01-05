@@ -1,4 +1,4 @@
-const csp = `http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'none'; child-src 'none'; sandbox 'allow-scripts'"`
+const csp = `http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'none'; child-src 'none';"`
 const sandbox = document.getElementById('sandbox');
 const srcdoc = `
     <!DOCTYPE html>

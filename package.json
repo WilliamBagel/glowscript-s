@@ -9,8 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:sandbox": "node ./build-sandbox.js",
-    "deploy:sandbox": "npm run build:sandbox && npx gh-pages -d dist-sandbox"
+    "build:sandbox": "node ./build-sandbox.js"
   },
   "repository": {
     "type": "git",
